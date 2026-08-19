@@ -1,8 +1,10 @@
 # Selección de Arquitectura — Caso Essalud UCI
 
-## Arquitectura elegida: **Event-Driven Architecture (EDA) sobre microservicios**
+## Arquitectura elegida: **Event-Driven Architecture (EDA)**
 
-Eventos como columna vertebral de la comunicación (publish/subscribe a través de un broker), con el sistema descompuesto en servicios independientes que producen y consumen esos eventos.
+Eventos como columna vertebral de la comunicación (publish/subscribe a través de un broker), con el sistema descompuesto en servicios independientes que producen y consumen esos eventos (microservicios como unidad de despliegue, hexagonal como organización interna de cada servicio — complementos, no la elección).
+
+**¿Por qué EDA y no otra, si solo se puede elegir una?** Porque el problema dominante del caso no es cómo organizar el código (hexagonal) ni cómo particionar el sistema (microservicios): es que **eventos críticos ocurren en un lugar y varios interesados deben reaccionar de inmediato** — un paciente se agrava a las 3 a.m., un turno se cierra, una indicación cambia. Las tres problemáticas críticas del enunciado son reacciones a eventos, y el broker aporta además la resiliencia (las alertas persisten aunque un consumidor esté caído) y la escala horizontal que exigen los requerimientos no funcionales.
 
 ---
 
