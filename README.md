@@ -44,6 +44,10 @@ Essalud lanza un piloto para el manejo de sus Unidades de Cuidados Intensivos (U
 - [Requerimientos Funcionales](Requirements/ReqFunc.md)
 - [Requerimientos No Funcionales](Requirements/ReqNoFunc.md)
 
+## Arquitectura
+
+- [Selección de Arquitectura](Arquitectura.md) — Event-Driven Architecture sobre microservicios, justificada contra 3-Tier, Hexagonal y Microservicios puros.
+
 ## Agentes
 
 - [Agente Roberto](Agents/Roberto-Agent.md), [Agente Claudia](Agents/Claudia-Agent.md), [Agente Pablo](Agents/Pablo-Agent.md) — cada agente encarna a una persona y evalúa si los requerimientos satisfacen sus necesidades.
